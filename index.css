@@ -1,0 +1,155 @@
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.container {
+    width: 699px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 15px;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.top  {
+    margin-bottom: 30px;
+}
+h2 {
+    margin-left: 50px;
+    color: rgba(7, 235, 220, 0.745);
+    
+}
+h3  {
+    margin-left: 50px;
+    color: rgb(225, 255, 0);
+}
+p  {
+    margin-left: 50px;
+    margin-right: 20px;
+    color: rgb(216, 216, 216);
+}
+/*///////////////// The parent elements*/
+
+.footer{
+    display: flex;
+    margin-top: 50px;
+    padding-top: 20px;  
+}
+.left-side {
+    width: 50%;
+    height: 300px;
+    border: 1px solid rgb(23, 193, 193);
+    float: left;
+    box-sizing: border-box; 
+    border-radius: 0px 0px 0px 15px;
+    background-color: rgb(23, 193, 193);
+}
+.right-side {
+    width: 50%;
+    height: 300px;
+    border: 1px solid rgba(23, 193, 193, 0.722);
+    float: right;
+    box-sizing: border-box; 
+    border-radius: 0px 0px 15px 0px;
+    background-color: rgba(23, 193, 193, 0.722);
+}
+/*/////////////////   The child elements of left side */
+.container-left {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.h3 {
+    margin-left: 0px;
+    color: aliceblue;
+}
+.price-container {
+    margin-bottom: 10px;
+}
+.price{
+    color: aliceblue;
+    /* margin-left: 50px; */
+    font-weight: 700;
+    font-size: 1.9rem;
+    display: inline-block;
+}
+.price-month  {
+    color: rgba(242, 240, 240, 0.625);
+    font-size: 15px;
+    display: inline-block;
+    top: -7px;
+    margin-left: 10px;
+    position: relative;
+}
+.conditional {
+    color: aliceblue;
+    /* margin-left: 50px; */
+    margin-bottom: 30px;
+}
+button{
+    color: white;
+    background-color: #c0df34;
+    border: none;
+    padding: 20px;
+    width: 80%;
+    border-radius: 5px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #a9c42d;
+    transform: scale(1.02);
+  }
+/*/////////////////   The child element of right side */
+  .container-right   {
+    padding-top: 30px;
+    margin-left: 50px;
+}
+/* .h3 {
+    margin-left: 0px;
+    color: aliceblue;
+} //chung vs h3 ben left, bỏ cũng được tại ghi cho biết*/
+ul{
+    padding: 0;
+    list-style: none;
+    color: rgba(242, 240, 240, 0.625);
+    
+}
+/* responsive */
+/* @media (max-width: 600px) {
+    .container {
+        margin-left: 0;
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side, .right-side {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+    .right-side {
+        border-radius: 15px 15px 0px 0px;
+    }
+}    */
+
+@media (max-width: 600px)   {
+    .container, .footer, .left-side, .right-side {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side{
+        border-radius: 0;
+    }
+    .right-side {
+        border-radius: 0px 0px 15px 15px;
+    }
+}
